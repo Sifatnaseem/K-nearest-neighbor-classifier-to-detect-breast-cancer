@@ -24,7 +24,7 @@ knn=KNeighborsClassifier()
 k_range = list(range(1,25))
 param_grid = dict(n_neighbors=k_range)
 grid_search=grid.fit(X_train,y_train)
-grid = GridSearchCV (knn, param_grid,cv=15,scoring='accuracy',return_train_score=False,verbose=1)
+grid = GridSearchCV (knn, param_grid,cv=5,scoring='accuracy',return_train_score=False,verbose=1)
 print(grid_search.best_params_)
 
 
