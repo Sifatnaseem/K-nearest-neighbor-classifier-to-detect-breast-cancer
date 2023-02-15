@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[46]:
-
-
-
 from sklearn import datasets
 
 #Load dataset
@@ -45,10 +38,10 @@ knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test, y_pred))
-print("Recall:",metrics.recall_score(y_test, y_pred))
+print("specificity:",metrics.recall_score(y_test, y_pred))
 
 
-# In[ ]:
+
 
 
 
