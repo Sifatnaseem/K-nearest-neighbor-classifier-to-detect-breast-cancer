@@ -39,6 +39,10 @@ y_pred = knn.predict(X_test)
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test, y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
+from sklearn.metrics import confusion_matrix
+tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+specificity = tn / (tn + fp)
+print("Specificity:", specificity)
 
 
 
